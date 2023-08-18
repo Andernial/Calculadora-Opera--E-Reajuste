@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <p>Calculadora Simples</p>
+            <hr>
+            <form>
+            <div class="display">
+                <input type="text" class="display" id="display-numbers" placeholder="0" name="display" readonly>
+            </div>
+            <div class="botoes-calc">
+            <div class="botoes-esquerda">
+             <button class="btn" type="button" onclick="operaçao(7)">7</button>
+             <button class="btn" type="button" onclick="operaçao(8)">8</button>
+             <button class="btn" type="button" onclick="operaçao(9)">9</button>
+             <button class="btn" type="button" onclick="operaçao(4)">4</button>
+             <button class="btn" type="button" onclick="operaçao(5)">5</button>
+             <button class="btn" type="button" onclick="operaçao(6)">6</button>
+             <button class="btn" type="button" onclick="operaçao(1)">1</button>
+             <button class="btn" type="button" onclick="operaçao(2)">2</button>
+             <button class="btn" type="button" onclick="operaçao(3)">3</button>
+             <button class="btn" type="button" onclick="operaçao(0)">0</button>
+               
+            <button class="btn" type="button" id="botao-ponto" onclick="operaçao('.')">.</button>
+            </div>
+            <div class="botoes-direita">
+                <button class="btn" type="button" onclick="deletar()">CE</button>
+                <button class="btn" type="button" onclick="resetar()">C</button>
+                <button class="btn" type="button" onclick="operaçoes('/')">/</button>
+                <button class="btn" type="button" onclick="operaçoes('*')">*</button>
+                <button class="btn" type="button" onclick="operaçoes('-')">-</button>
+                <button class="btn" type="button" onclick="operaçoes('+')">+</button>
+                
+                <button type="button" class="btn" value="=" id="botao-resultado" onclick="calcular()">=</button>
+            </div>
+        </form>
+         </div>
+        
+         
+        </div>
+     
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
