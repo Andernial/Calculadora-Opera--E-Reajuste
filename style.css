@@ -89,7 +89,12 @@ hr {
 
 
 }
-
+.reset{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    margin-left: 300px;
+}
 .btn {
     padding: 5px;
     width: 50px;
@@ -119,6 +124,19 @@ hr {
     background-color: aqua;
     transition: 0.5s;
     
+}
+.btn-reset{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    font-weight: 700;
+}
+.btn-reset:hover{
+    cursor: pointer;
+    background-color: gray;
+    transition: 0.5s;
 }
 #display-numbers {
     padding: 20px;

@@ -1,3 +1,16 @@
+
+const botaoImc = () =>{
+    location.href = "imc.html"
+}
+const botaoOpe = () =>{
+    location.href = "operation.html"
+}
+const resetBtn = () =>{
+    location.href = "index.html"
+}
+
+
+
 // js da calculadora
 let result = document.getElementById('display-numbers')
 let result1 = ""
