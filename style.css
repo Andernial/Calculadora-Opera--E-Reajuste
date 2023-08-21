@@ -5,6 +5,7 @@ body {
 
 * {
     box-sizing: border-box;
+    
 }
 
 hr {
@@ -19,6 +20,7 @@ hr {
     align-items: center;
     flex-direction: column;
     height: 100vh;
+    width: 100vw;
     background-color: rgb(75, 13, 13);
 }
 .caixa{
@@ -27,10 +29,10 @@ hr {
     align-items: center;
     flex-direction: column;
     background-color: rgb(124, 230, 234);
-    width: 300px;
-    height: 400px;
+    width: 330px;
+    height: 430px;
     border-radius: 15px;
-    box-shadow: 1px 1px 10px black;
+    box-shadow: 1px 1px 10px rgb(1, 72, 71);
 }
 
 .box {
@@ -49,10 +51,15 @@ hr {
 }
 .inputs-box{
     display: flex;
+    align-items: center;
     flex-direction: column;
 }
-.inputs{
-    margin-bottom: 10px;
+
+.inputs-item{
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none; 
 }
 
 .display {
@@ -90,10 +97,7 @@ hr {
 
 }
 .reset{
-    display: flex;
-    justify-content: start;
-    width: 100%;
-    margin-left: 300px;
+    margin-right: 800px;
 }
 .btn {
     padding: 5px;
@@ -135,7 +139,7 @@ hr {
 }
 .btn-reset:hover{
     cursor: pointer;
-    background-color: gray;
+    background-color:  rgb(150, 14, 14);
     transition: 0.5s;
 }
 #display-numbers {
@@ -161,8 +165,110 @@ hr {
 }
 #container3{
     background-color: rgb(44, 40, 40);
+    text-align: center;
 }
 #container3 > h1{
     color: white;
     font-size: 50px;
+}
+#gen2{
+    margin-top: 50px;
+    width: 230px;
+}
+.inputs>label,p{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 500px) {
+form{
+    width: 300px;
+    height: 400px;
+}
+.btn{
+    height: 50px;
+    width: 35px;
+    font-size: 10px;
+}
+.box{
+    width: 300px;
+}
+.display{
+    box-sizing: border-box;
+}
+#display-numbers {
+    padding: 20px;
+    width: 200px;
+
+}
+#botao-ponto {
+    width: 81px;
+}
+
+#botao-resultado {
+    width: 81px;
+}
+.botoes-calc {
+    
+  
+    margin-left: 20px;
+
+}
+.reset{
+    margin-right: 0px;
+    margin-bottom: 20px;
+}
+.botoes-direita{
+    margin-left: 0;
+}
+
+}
+@media (orientation: landscape) and (hover: none) and (pointer: coarse) {
+    .botoes-direita{
+        height: 0;
+        margin-left: 0;
+    }
+    .botoes-esquerda{
+        height: 0;
+        margin-left: 0;
+    }
+    form{
+        width: 300px;
+        height: 800px;
+        margin-bottom: 150px;
+    }
+    .btn{
+        
+        width: 35px;
+        font-size: 10px;
+    }
+    .box{
+        height: 300px;
+       
+    }
+    .display{
+        box-sizing: border-box;
+    }
+    #display-numbers {
+        padding: 15px;
+        width: 200px;
+    
+    }
+    #botao-ponto {
+        width: 81px;
+    }
+    
+    #botao-resultado {
+        width: 81px;
+    }
+    .botoes-calc {
+        
+      
+        margin-left: 20px;
+    
+    }
+    .reset{
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
 }

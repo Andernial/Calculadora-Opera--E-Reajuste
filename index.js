@@ -66,9 +66,6 @@ const resetar = () =>{
 
 // js da calculadora de imc
 
-function digitosValidos(text){
-    return text.replace(/[^0-9,]/g, "")
-}
 const calcularImc = () =>{
     let altura = document.getElementById('altura').value 
     let peso = document.getElementById('peso').value
