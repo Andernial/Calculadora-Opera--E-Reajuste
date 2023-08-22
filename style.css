@@ -243,6 +243,19 @@ tr {
 
 }
 
+.btn-menu {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    font-weight: 700;
+}
+
+.btn-menu:hover {
+    background-color: gray;
+    transition: 0.5s;
+}
 
 @media screen and (max-width: 500px) {
     form {
@@ -289,7 +302,7 @@ tr {
     .reset {
 
         margin-right: 0px;
-        margin-bottom: 0px;
+        margin-bottom: 5px;
         position: relative;
     }
 
@@ -309,7 +322,7 @@ tr {
 
     #titulo-reajuste {
         margin: 0;
-        margin-top: 10px;
+        margin-bottom: 10px;
         font-size: 20px;
 
     }
@@ -328,6 +341,13 @@ tr {
     .botoes-direita {
         height: 0;
         margin-left: 0;
+    }
+
+    .reset {
+        margin-top: 50px;
+        margin-right: 0px;
+        margin-bottom: 5px;
+        position: unset;
     }
 
     .botoes-esquerda {
@@ -349,6 +369,7 @@ tr {
 
     .box {
         height: 300px;
+        margin-bottom: 52px;
 
     }
 
@@ -382,4 +403,36 @@ tr {
         margin-bottom: 20px;
     }
 
+    #p-imc {
+        display: none;
+    }
+
+    #titulo-reajuste {
+        display: none;
+    }
+    
+    .inputs-box {
+        flex-direction: unset;
+    }
+
+    .inputs {
+        font-size: 15px;
+        margin: 0;
+    }
+
+    .inputs-item {
+        margin-right: 10px;
+        padding: 5px;
+    }
+
+    .caixa>p {
+        margin: 0;
+    }
+
+    #gen2 {
+        padding: 5px;
+    }
+    #p-mini{
+        display: none;
+    }
 }
