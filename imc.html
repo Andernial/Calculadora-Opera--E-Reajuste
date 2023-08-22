@@ -14,25 +14,38 @@
         <div class="reset">
             <button class="gen" onclick="resetBtn()">Voltar a tela inicial</button>
         </div>
-        <h1>Calculadora de IMC</h1>
+        <h1 id="titulo-reajuste">Calculadora de Reajuste Salarial </h1>
+        <p>(apenas números e virgula)</p>
        
         <div class="caixa">
             <p>Digite as informações necessárias</p>
              <div class="inputs-box">
             <div class="inputs">
-                <p>altura</p>
-                <input type="number" step="0.01" class="inputs-item" id="altura" placeholder="Ex: 170">
-                <label for="idade">m</label>
+                <p>Salario</p>
+                <input type="number" step="0.01" class="inputs-item" id="salario" placeholder="Ex: 0,00">
+               
             </div>
             <div class="inputs">
-                <p>peso</p>
-                <input type="number" class="inputs-item" id="peso" placeholder="Ex: 60,5 kg">
-                <label for="idade">kg</label>
+                <p>Reajuste</p>
+                <input type="number" class="inputs-item" id="reajuste" placeholder="Ex: 0,0">
+               
             </div>
-           
+            
         </div>
-        <button class="gen" id="gen2" onclick="calcularImc()">Calcular</button>
-        <p id="result-imc"></p>
+        <button class="gen" id="gen2" onclick="exibeResultado()">Calcular</button>
+        <table id="tabela-toda"  class="tabela">
+            <tr class="tabela">
+              <th class="tabela">salario atual</th>
+              <th class="tabela">porcentagem de aumento</th>
+              <th class="tabela">valor do reajuste</th>
+              <th class="tabela">salário reajustado</th>
+            </tr>
+            <tr id="table1" class="tabela">
+             
+            </tr>
+          </table>
+        
+       
         </div>
     </div>
     <script src="index.js"></script>

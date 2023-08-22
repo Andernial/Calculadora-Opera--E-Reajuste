@@ -66,16 +66,55 @@ const resetar = () =>{
 
 // js da calculadora de imc
 
-const calcularImc = () =>{
-    let altura = document.getElementById('altura').value 
-    let peso = document.getElementById('peso').value
-    altura = altura.replace(',','.')
-    let resultadoImc = (peso / altura ** 2).toFixed(2)
-    if(altura != "" && peso != ""){
-       
-       document.getElementById('result-imc').innerHTML = "o resultado é " + resultadoImc
-        console.log(altura,peso)
+
+const tabela = document.getElementById('table1')
+let resultado = ""
+let valorMudança =  0
+
+const calcularReajuste =() =>{
+    let salario = document.getElementById('salario').value
+    let reajuste = document.getElementById('reajuste').value
+    
+    salario = Number(salario)
+    reajuste = Number(reajuste)
+    resultado = Number(reajuste / 100 * salario) + salario
+    valorMudança = Number( salario - resultado )
+    valorMudança = Math.abs(valorMudança).toFixed(2)
+    resultado = Number(resultado).toFixed(2)
+    console.log(resultado,salario,reajuste,valorMudança)
+
+}
+const exibeResultado =() =>{
+ 
+    if(salario.value != ""){
+        calcularReajuste()
+        const salarioAtual = document.createElement('td')
+        salarioAtual.innerHTML = salario.value
+        tabela.append(salarioAtual)
+
+        const salarioPorcentagemAu = document.createElement('td')
+        salarioPorcentagemAu.innerHTML = reajuste.value + "%"
+        tabela.append(salarioPorcentagemAu)
+
+        const salarioMudança = document.createElement('td')
+        salarioMudança.innerHTML = valorMudança
+        tabela.append(salarioMudança)
+
+        const salarioNovo = document.createElement('td')
+        salarioNovo.innerHTML = resultado
+        tabela.append(salarioNovo)
+        
+        // document.getElementById("gen2").style.display = "none";
+        document.getElementById('tabela-toda').style.display = "block";
+        
+        salario.value = ""
+        reajuste.value = ""
+        resultado = ""
+        valorMudança = ""
     }else{
-        document.getElementById('result-imc').innerHTML = "digite um valor valido"
+        alert("digite um valor válido")
     }
+    
+    
+
 }
