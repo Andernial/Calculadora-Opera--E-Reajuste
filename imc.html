@@ -16,9 +16,10 @@
         </div>
         <h1 id="titulo-reajuste">Calculadora de Reajuste Salarial </h1>
         <p>(apenas números e virgula)</p>
-       
         <div class="caixa">
-            <p>Digite as informações necessárias</p>
+        
+       
+            <p id="p-imc">Digite as informações necessárias</p>
              <div class="inputs-box">
             <div class="inputs">
                 <p>Salario</p>
@@ -33,17 +34,18 @@
             
         </div>
         <button class="gen" id="gen2" onclick="exibeResultado()">Calcular</button>
-        <table id="tabela-toda"  class="tabela">
-            <tr class="tabela">
-              <th class="tabela">salario atual</th>
-              <th class="tabela">porcentagem de aumento</th>
-              <th class="tabela">valor do reajuste</th>
-              <th class="tabela">salário reajustado</th>
-            </tr>
-            <tr id="table1" class="tabela">
-             
-            </tr>
-          </table>
+            
+            <div class="resultados" id="resultados-id">
+            <input class="resultados-inputs" type="text" id="salarioAtual" readonly>
+            <br>
+            <input class="resultados-inputs" type="text" id="salarioPorcentagemAu" readonly>
+            <br>
+            <input class="resultados-inputs" type="text" id="salarioMudança" readonly>
+            <br>
+            <input class="resultados-inputs" type="text" id="salarioNovo" readonly>
+        </div>
+            
+        
         
        
         </div>

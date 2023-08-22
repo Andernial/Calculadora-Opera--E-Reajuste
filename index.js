@@ -88,29 +88,22 @@ const exibeResultado =() =>{
  
     if(salario.value != ""){
         calcularReajuste()
-        const salarioAtual = document.createElement('td')
-        salarioAtual.innerHTML = salario.value
-        tabela.append(salarioAtual)
+        const salarioAtual = document.getElementById('salarioAtual')
+        salarioAtual.value = "salario atual: " + salario.value
 
-        const salarioPorcentagemAu = document.createElement('td')
-        salarioPorcentagemAu.innerHTML = reajuste.value + "%"
-        tabela.append(salarioPorcentagemAu)
-
-        const salarioMudança = document.createElement('td')
-        salarioMudança.innerHTML = valorMudança
-        tabela.append(salarioMudança)
-
-        const salarioNovo = document.createElement('td')
-        salarioNovo.innerHTML = resultado
-        tabela.append(salarioNovo)
+        const salarioPorcentagemAu = document.getElementById('salarioPorcentagemAu')
+        salarioPorcentagemAu.value= "porcentagem de reajuste: " + reajuste.value + "%"
         
-        // document.getElementById("gen2").style.display = "none";
-        document.getElementById('tabela-toda').style.display = "block";
-        
+        const salarioMudança = document.getElementById('salarioMudança')
+        salarioMudança.value = "valor do reajuste: " + valorMudança
+      
+        const salarioNovo = document.getElementById('salarioNovo')
+        salarioNovo.value= "salario reajustado: " + resultado
+       
+        document.getElementById("resultados-id").style.display = "block"
         salario.value = ""
         reajuste.value = ""
-        resultado = ""
-        valorMudança = ""
+        
     }else{
         alert("digite um valor válido")
     }
